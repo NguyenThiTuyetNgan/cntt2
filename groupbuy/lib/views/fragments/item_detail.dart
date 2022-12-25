@@ -25,36 +25,122 @@ class _DetailState extends State<Detail> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(20),
                 child: Column(children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          'Bông lan trứng muối mặn quá trời quá đất',
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                          maxLines: 2,
+                  Container(
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    height: 70,
+                    color: Colors.green.shade900,
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Column(
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  '70.000d',
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.grey.shade300,
+                                      decoration: TextDecoration.lineThrough),
+                                ),
+                              ),
+                              Expanded(
+                                child: Text(
+                                  '7.000đ',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  '10 sản phẩm được đặt mua',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      'Kết thúc trong:',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      '24:00:00',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          )
+                        ]),
+                  ),
+                  Container(
+                    height: 140,
+                    color: Colors.white,
+                    padding: EdgeInsets.all(10),
+                    width: MediaQuery.of(context).size.width,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            'Bông lan trứng muối mặn quá trời quá đất',
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                            maxLines: 3,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        '7.000đ',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
-                      ),
-                    ],
+                        Align(
+                          alignment: Alignment.bottomLeft,
+                          child: RichText(
+                              text: TextSpan(children: [
+                            WidgetSpan(
+                                child: Icon(
+                              Icons.add_shopping_cart_outlined,
+                              color: Colors.lightGreen,
+                              size: 15,
+                            )),
+                            TextSpan(
+                                text:
+                                    "Cần thêm 3 đơn hàng nữa để đạt giá thấp nhất",
+                                style: TextStyle(
+                                    fontSize: 12, color: Colors.black))
+                          ])),
+                        )
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 20,
                   ),
-                  Text(
-                    'Lớp xôi không quá dày, chiên giòn rộm, nhân đầy ụ đậm đà thêm thêm sốt chua ngọt vị vừa phải.',
-                    style: TextStyle(fontSize: 16, color: Colors.grey.shade700),
+                  Container(
+                    color: Colors.white,
+                    padding: EdgeInsets.all(10),
+                    child: Text(
+                      'Lớp xôi không quá dày, chiên giòn rộm, nhân đầy ụ đậm đà thêm thêm sốt chua ngọt vị vừa phải.',
+                      style:
+                          TextStyle(fontSize: 16, color: Colors.grey.shade700),
+                    ),
                   )
                 ]),
               )

@@ -4,6 +4,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:groupbuy/models/items.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import 'item_detail.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
   static const String routeName = '/homePage';
@@ -204,7 +206,8 @@ class gridProducts extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
           ),
           child: GestureDetector(
-            // onTap: ()=> Navigator.of(context). push(MaterialPageRoute(builder: (_) => )),
+            onTap: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (_) => const Detail())),
             child: Column(children: [
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -245,7 +248,7 @@ class gridProducts extends StatelessWidget {
                       Align(
                         alignment: Alignment.bottomRight,
                         child: Text(
-                          itemsBought[index],
+                          itemsBought[index] + ' sản phẩm đặt mua',
                           style: TextStyle(fontSize: 10, color: Colors.black),
                         ),
                       )
